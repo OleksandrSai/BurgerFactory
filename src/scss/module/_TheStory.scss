@@ -1,0 +1,55 @@
+#theStory {
+    margin-top: 150px;
+    min-width: 360px;
+
+    .theStory__box {
+        display: flex;
+
+        @include sr-d {
+            flex-wrap: wrap;
+        }
+
+        .theStory__body {
+            margin-right: 49px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            @include sr-d {
+                text-align: center;
+                margin-right: 0px;
+                margin-bottom: 49px;
+            }
+
+            .title {
+                text-align: left;
+                margin-bottom: 20px;
+
+                @include sr-d {
+                    text-align: center;
+                }
+            }
+
+            .subtitle {
+                margin-bottom: 50px;
+            }
+        }
+
+        .theStory__img {
+
+            @include sr-d {
+                margin: 0 auto;
+                max-width: 695px;
+                max-height: 441px;
+            }
+
+            img {
+                object-fit: contain;
+
+                @include sr-d {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

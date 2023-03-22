@@ -1,0 +1,158 @@
+.header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 125px;
+    min-width: 360px;
+
+    @include md-d {
+        position: relative;
+        background-color: white;
+    }
+
+    .header__burger {
+        display: none;
+
+        @include md-d {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            order: 1;
+            margin-left: 15px;
+        }
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        display: block;
+        content: "";
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger span {
+        content: "";
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px
+    }
+
+    .header__logo {
+        width: 208px;
+        height: 67px;
+
+        @include md-d {
+            order: 3;
+            margin-right: 10px;
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .header__menu {
+        @include md-d {
+            padding-left: 50px;
+            position: absolute;
+            top: -20px;
+            left: -25px;
+            order: 2;
+            z-index: -1;
+            transition: all 0.1s;
+
+        }
+
+        .header__menu__items {
+            margin-right: 220px;
+            list-style: none;
+            display: flex;
+            text-transform: uppercase;
+
+            @include md-d {
+                flex-direction: column;
+                margin-left: -36px;
+            }
+
+            @include xm-d {
+                margin-right: 20px;
+                margin-left: -20px;
+            }
+
+
+            .header__menu__item {
+                margin-right: 70px;
+
+                @include sr-d {
+                    margin-right: 25px;
+                }
+
+                @include sm-d {
+                    margin-right: 0px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $colorBlack;
+                }
+            }
+
+        }
+    }
+
+    .active {
+        @include md-d {
+            top: 110px;
+            width: 100%;
+            height: 1000px;
+            z-index: 1;
+        }
+    }
+
+    .header__orderNow {
+        background-color: $colorLBlue;
+        border-radius: 10px;
+        width: 161px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s;
+        cursor: pointer;
+        
+        @include gg-d {
+            margin-left: -38px;
+        }
+
+        @include md-d {
+            order: 2;
+            position: absolute;
+            top: 85px;
+            left: 50px;
+            z-index: -1;
+        }
+    }
+
+    .activeOrder {
+        @include md-d {
+            left: 50px;
+            z-index: 1;
+            top: 240px;
+        }
+    }
+}

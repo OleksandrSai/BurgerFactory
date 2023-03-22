@@ -1,0 +1,94 @@
+#location {
+    margin-top: 156px;
+    min-width: 360px;
+
+    .location__body {
+        height: 685;
+
+        .location__box {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+
+            .location__adress {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+
+                @include sm-d {
+                    flex-wrap: wrap;
+                }
+
+                li {
+                    margin-left: -15px;
+                    font-size: 24;
+                    font-weight: 400;
+                    width: 100%;
+                    text-align: center;
+
+                }
+
+                li:first-child {
+                    font-weight: bold;
+                }
+            }
+
+            .location__map {
+                margin-top: 30px;
+                max-width: 860px;
+                height: 483px;
+                background-image: url(../img/Image1.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: relative;
+
+                @include mm-d {
+                    height: 200px;
+                }
+
+                @include mx-d {
+                    height: 205px;
+                }
+
+
+                .location__map__point {
+                    position: absolute;
+                    top: 175px;
+                    left: 310px;
+                    width: 50px;
+                    height: 50px;
+                    background-image: url(../img/DesignMBurger.png);
+                    background-repeat: no-repeat;
+                    background-position: 7px;
+                    border-radius: 50%;
+                    background-color: lighten($colorLBlue, 100%);
+
+                    @include gg-d {
+                        left: 320px;
+                        top: 170px;
+                    }
+
+                    @include md-d {
+                        left: 290px;
+                        top: 160px;
+                    }
+
+                    @include mx-d {
+                        left: 160px;
+                        top: 95px;
+                    }
+
+                    @include mm-d {
+                        left: 130px;
+                        top: 60px;
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}

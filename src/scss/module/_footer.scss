@@ -1,0 +1,36 @@
+footer {
+    height: 125px;
+    width: 100%;
+    background-color: #F5F5F5;
+    margin-bottom: 28px;
+    margin-top: 150px;
+    min-width: 360px;
+
+    .footer__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer__logo {
+            @include sm-d{
+                margin-left: 5px;
+            }
+            img {
+                height: 67px;
+                width: 208px;
+            }
+        }
+        .footer__adress{
+            margin-right: 5px;
+            list-style: none;
+            font-size: 14px;
+            text-align: end;
+            li{
+                font-weight: 400;
+            }
+            li:first-child{
+                font-weight: bold;
+            }
+        }
+    }
+}

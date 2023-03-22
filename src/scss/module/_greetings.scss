@@ -1,0 +1,78 @@
+.greetings {
+    width: 100%;
+    min-width: 360px;
+    background-image: url(../img/Trace1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 49px;
+    max-height: 695px;
+
+    .greetings__body {
+        display: flex;
+        @include md-d{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .greetings__box:nth-child(1) {
+        text-align: left;
+        @include lg-d{
+            margin-top: -80px;
+        }
+        @include gg-d{
+            margin-top: -100px;
+        }
+        @include md-d{
+            order: 1;
+            margin-top: -150px;
+            text-align: center;
+         }
+
+        .greetings__title {
+            padding-top: 93px;
+            font-size: 84px;
+        }
+
+        .greetings__subtitle {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .greetings__button {
+            background-color: #F6E224;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            width: 279px;
+            height: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .greetings__button:hover{
+            background-color: darken(#F6E224, 12%);
+        }
+
+    }
+
+    .greetings__box:nth-child(2) {
+        margin-left: 67px;
+        @include md-d{
+           order: 2;
+           margin-left: 0px;
+           margin-top: 50px;
+        }
+        img{
+            object-fit: contain;
+            width: 100%;
+            @include gg-d{
+                max-width: 750px;
+            }
+            @include md-d{
+               width: 300px;
+              
+             }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import "./mixin/vars";
+@import "./mixin/breakpoints";
+@import "./mixin/font";
+@import "./mixin/color";
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1920px;
+    @include Popins;
+    color: $colorBlack;
+    font-weight: bold;
+    font-size: 18px;
+    
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        
+
+        main {
+            .title {
+                font-size: 64px;
+                text-align: center;
+                font-weight: 900;
+            }
+
+            .subtitle {
+                font-size: 24px;
+            }
+
+            .text {
+                font-weight: 400;
+            }
+
+        }
+
+        .activeMain {
+            @include sm-d {
+                margin-top: 220px;
+            }
+        }
+
+    }
+}
+
+.container {
+    max-width: 1352px;
+    margin: 0 auto;
+
+    @include xm-d {}
+}
+
+
+
+
+
+@import "./module/header";
+@import "./module/greetings";
+@import "./module/ingredients";
+@import "./module/TheStory";
+@import "./module/burgers";
+@import "./module/location";
+@import "./module/footer";
