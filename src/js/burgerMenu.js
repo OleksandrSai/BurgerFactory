@@ -5,14 +5,21 @@ let main = document.querySelector("main")
 
 
 
-burgerButton.addEventListener("click", ()=>{
+burgerButton.addEventListener("click", () => {
     main.classList.toggle("activeMain")
     headerOrder.classList.toggle("activeOrder")
     headerMenu.classList.toggle("active")
 })
+document.querySelectorAll("a")
+.forEach(el => el.addEventListener("click", () => {
+    main.classList.toggle("activeMain")
+    headerOrder.classList.toggle("activeOrder")
+    headerMenu.classList.toggle("active")
+}) );
+
 
 //кнопка Discover the ingredients
-document.querySelector(".greetings__button").addEventListener("click", ()=>{
+document.querySelector(".greetings__button").addEventListener("click", () => {
     window.location.assign("./#ingredients")
 })
 
